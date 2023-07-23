@@ -16,7 +16,7 @@ The Trigger Warning Extension is a tool designed to help protect individuals fro
 To install the extension, follow these steps:
 
 1. Clone or download this repository.
-2. Open Google Chrome and go to `chrome://extensions`. or (`brave://extensions`)
+2. Open Google Chrome and go to `chrome://extensions` or (`brave://extensions`)
 3. Turn on `Developer mode` from the top right.
 4. Click on `Load unpacked` or drag and drop the `trigger` folder on a blank space.
 5. Navigate to the downloaded repository directory and select it.
