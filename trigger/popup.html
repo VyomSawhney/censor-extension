@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            width: 200px;
+            height: 200px;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        .slider.round {
+            border-radius: 34px;
+        }
+        .slider.round:before {
+            border-radius: 50%;
+        }
+        .category-input,
+        .word-input {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TW Warnings!</h1>
+    <h2>Enable/Disable</h2>
+    <div id="categories"></div>
+
+    <h2>Add New Category</h2>
+    <input id="new-category" type="text" placeholder="Category Name">
+    <button id="add-category">Add Category</button>
+
+    <h2>Select Category</h2>
+    <select id="category-select"></select>
+    <br>
+    <select id="words-list" size="10"></select>
+    <br>
+    <input id="new-word" type="text" placeholder="New Word">
+    <button id="add-word">Add Word</button>
+    <button id="remove-word">Remove Selected Word</button>
+    <button id="remove-category">Remove Selected Category</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>
